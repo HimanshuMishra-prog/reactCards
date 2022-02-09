@@ -1,9 +1,9 @@
 import React, { useReducer } from "react";
 import { Form,FormGroup,Label,Col,Input,Button } from "reactstrap";
-import { useState } from "react";
+
 import axios from "axios";
-import validator from "validator";
-import { type } from "@testing-library/user-event/dist/type";
+
+
 
 const Forms = (props) =>{
 //  const [email,setEmail] = useState("");
@@ -121,7 +121,9 @@ const onSubmit = (event) => {
   }
 }
 
-  return(  <Form onSubmit={onSubmit}>
+  return(  <Form onSubmit={onSubmit  }
+       className="forms"         
+  >
   <FormGroup row>
     <Label
       for="exampleEmail"
@@ -138,6 +140,7 @@ const onSubmit = (event) => {
             placeholder="xyz@gmail.com"
             type="email"
             value= {state.email} 
+            
       />
 {/* yaha par is button se apan password aur email field clear kar rahe he    */}
        <button type ="button" onClick={() => setEmail("")}>&times;</button>

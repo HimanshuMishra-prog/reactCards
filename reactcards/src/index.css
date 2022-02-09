@@ -31,3 +31,14 @@ h1 {
   display: flex;
   color: aqua;
 }
+
+.navbar {
+  height: 100px;
+  
+}
+
+.forms {
+  width: 40%;
+  align-items: center;
+  margin-left: 300px;
+}

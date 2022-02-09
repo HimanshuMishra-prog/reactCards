@@ -2,16 +2,22 @@ import React from 'react';
 
 import { Container } from 'reactstrap';
 import Forms from './Components/form';
+import Navigation from './Components/navbar';
 const LoginForm = (props) => {
     const LoginSuccess = () =>{
         props.onLoginSuccess();
     }
+   
     return(
+<>
+<Navigation />
 <Container>
-<h1>Please Login</h1> 
+
+
 <Forms onLoginSuccess = {LoginSuccess}
 />
 </Container>
+</>
     );
 }
 

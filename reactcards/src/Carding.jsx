@@ -3,13 +3,18 @@ import Card from "./Components/Cards";
 import axios from "axios";
 import { useState,useEffect } from "react";
 import { Container } from "reactstrap";
-
+import {useSelector ,useDispatch} from 'react-redux';
+import { userDataInitialize, userDataSuccess } from "./users/action";
 const Cards = () =>{
     const [response,setResponse] = useState([]);
+    const state = useSelector((state) => state);
+    const dispatch = useDispatch();
     useEffect(() =>{
+      dispatch(userDataInitialize())
       async function getData(){
         const res = await axios(`https://reqres.in/api/users`);
         setResponse(res.data.data)
+        dispatch(userDataSuccess(res.data))
       };
       getData()
      

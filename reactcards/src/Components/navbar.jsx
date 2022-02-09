@@ -1,17 +1,20 @@
-import {Navbar,NavbarBrand,NavbarToggler,Collapse,NavItem,Nav,NavLink,UncontrolledDropdown,NavbarText,DropdownToggle,DropdownItem,DropdownMenu} from "reactstrap";
+import {Navbar,NavbarBrand,NavbarToggler,Collapse,NavItem,Nav,NavLink,UncontrolledDropdown,DropdownToggle,DropdownItem,DropdownMenu} from "reactstrap";
 
 
 const Navigation = () =>{
  
     return(
-<div>
+<div 
+  
+>
   <Navbar
+    className="navbar"
     color="light"
     expand="md"
     light
   >
     <NavbarBrand href="/">
-      reactstrap
+      User Login
     </NavbarBrand>
     <NavbarToggler onClick={function noRefCheck(){}} />
     <Collapse navbar>
@@ -53,9 +56,7 @@ const Navigation = () =>{
           </DropdownMenu>
         </UncontrolledDropdown>
       </Nav>
-      <NavbarText>
-        Simple Text
-      </NavbarText>
+      <><button >SignUp</button></>
     </Collapse>
   </Navbar>
 </div>

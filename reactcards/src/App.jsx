@@ -11,6 +11,7 @@ function App() {
  
   let [showLoginPage,setShowLoginPage] = useState(true)
   let [runEffect,setRunEffect] = useState(1);
+  
   // let showLoginPage = true
   useEffect(() => {
     console.log("Inside USE effect",runEffect)
@@ -30,12 +31,14 @@ function App() {
     localStorage.removeItem("isLoggedIn")
   }
 
+
   return (
    <>
  
    {showLoginPage === true ? 
-  <LoginForm onLoginSuccess= {onLoginSuccess}/>
-  :
+   <LoginForm onLoginSuccess= {onLoginSuccess} 
+  ></LoginForm>
+   :
   <div><button onClick={Logout}>Logout</button> <Cards /> </div>
   } 
    </>
